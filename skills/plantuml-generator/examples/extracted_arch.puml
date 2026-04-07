@@ -1,0 +1,11 @@
+@startuml Example
+actor User
+participant "PlantUML Skill" as Skill
+participant "PlantUML JAR" as JAR
+
+User -> Skill: Provide architecture PNG
+Skill -> JAR: Execute with -tpng
+JAR --> Skill: Return PNG
+Skill -> Skill: Embed Source in Metadata
+Skill --> User: Return Metadata-Rich PNG
+@enduml

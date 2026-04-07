@@ -1,0 +1,3 @@
+# PlantUML is downloaded on first use and should stay out of git.
+plantuml.jar
+plantuml-cache.json
