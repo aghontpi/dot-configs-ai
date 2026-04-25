@@ -11,6 +11,7 @@ A personal collection of AI skills I use..
 | **plantuml-generator** | Turns `.puml` files into PNGs locally, and can extract the source back out of a generated image. |
 | **mcp-builder** | A guide for building MCP servers.. upsteam is claude mcp builder skill |
 | **skill-creator** | upstream is claude skill creator |
+| **ipynb-editor** | Edit `.ipynb` Jupyter notebook files directly safely using find and replace. |
 
 ## Structure
 
@@ -20,7 +21,8 @@ skills/
 ├── code-review/       
 ├── plantuml-generator/ 
 ├── mcp-builder/       
-└── skill-creator/     
+├── skill-creator/     
+└── ipynb-editor/
 ```
 
 ## Usage
