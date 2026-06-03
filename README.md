@@ -14,9 +14,18 @@ A personal collection of AI skills I use..
 | **ipynb-editor** | Edit `.ipynb` Jupyter notebook files directly safely using find and replace. |
 | **searxng** | Self-hosted private web search via a local SearXNG metasearch engine — no tracking, no rate limits. |
 
+## MCP Servers
+
+| Server | What it does |
+|--------|-------------|
+| **searxng** | Self-contained MCP server for private web search. Manages its own SearXNG instance on port 8889 — no Docker, just Python. |
+
 ## Structure
 
 ```
+mcp/
+└── searxng/           # SearXNG MCP server (self-contained)
+
 skills/
 ├── memory/            
 ├── code-review/       

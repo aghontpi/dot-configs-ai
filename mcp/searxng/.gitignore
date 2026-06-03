@@ -1,0 +1,3 @@
+.searxng/
+.venv/
+__pycache__/
