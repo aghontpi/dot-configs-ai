@@ -272,6 +272,12 @@ class SearchInput(BaseModel):
         ge=0,
         le=2,
     )
+    limit: Optional[int] = Field(
+        default=None,
+        description="Max results to return (omit for all)",
+        ge=1,
+        le=30,
+    )
 
 
 @mcp.tool(
@@ -291,7 +297,7 @@ async def search(params: SearchInput) -> str:
     with no tracking. Supports time filtering, language selection, and safe search.
 
     Args:
-        params: SearchInput with query and optional filters.
+        params: SearchInput with query, optional filters, and optional limit.
 
     Returns:
         Markdown-formatted search results with title, URL, snippet, and source engine.
@@ -320,6 +326,8 @@ async def search(params: SearchInput) -> str:
         return f"Error: Search request failed: {e}"
 
     results = data.get("results", [])
+    if params.limit is not None:
+        results = results[:params.limit]
     if not results:
         return f"No results found for \"{params.query}\"."
 
