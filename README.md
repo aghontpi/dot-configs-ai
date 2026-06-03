@@ -20,6 +20,35 @@ A personal collection of AI skills I use..
 |--------|-------------|
 | **searxng** | Self-contained MCP server for private web search. Manages its own SearXNG instance on port 8889 — no Docker, just Python. |
 
+### Setup
+
+```bash
+# 1. Create venv and install MCP dependencies (one-time)
+cd mcp/searxng
+python3 -m venv .venv
+.venv/bin/pip3 install mcp httpx
+
+# 2. Register in Claude Code settings.json
+# Add to the "mcpServers" block:
+{
+  "mcpServers": {
+    "searxng": {
+      "command": "/path/to/mcp/searxng/.venv/bin/python3",
+      "args": ["/path/to/mcp/searxng/server.py"]
+    }
+  }
+}
+```
+
+First launch downloads and installs SearXNG (~60s). Subsequent launches are instant.
+
+### Tests
+
+```bash
+cd mcp/searxng
+.venv/bin/python3 test_server.py
+```
+
 ## Structure
 
 ```
