@@ -1,0 +1,10 @@
+use_default_settings: true
+server:
+  secret_key: "__SECRET_KEY__"
+  bind_address: "127.0.0.1"
+  port: 8888
+  limiter: false
+search:
+  formats:
+    - html
+    - json

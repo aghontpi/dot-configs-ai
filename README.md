@@ -12,6 +12,7 @@ A personal collection of AI skills I use..
 | **mcp-builder** | A guide for building MCP servers.. upsteam is claude mcp builder skill |
 | **skill-creator** | upstream is claude skill creator |
 | **ipynb-editor** | Edit `.ipynb` Jupyter notebook files directly safely using find and replace. |
+| **searxng** | Self-hosted private web search via a local SearXNG metasearch engine — no tracking, no rate limits. |
 
 ## Structure
 
@@ -22,7 +23,8 @@ skills/
 ├── plantuml-generator/ 
 ├── mcp-builder/       
 ├── skill-creator/     
-└── ipynb-editor/
+├── ipynb-editor/
+└── searxng/
 ```
 
 ## Usage
