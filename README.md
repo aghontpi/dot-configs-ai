@@ -18,7 +18,7 @@ A personal collection of AI skills I use..
 
 | Server | What it does |
 |--------|-------------|
-| **searxng** | Self-managing, self-contained MCP server for private web search. its own SearXNG instance on port 8889 — no Docker, ~60MB memory usage |
+| **searxng** | Self-managing, self-contained MCP server for private web search. — no Docker, ~60MB memory usage |
 
 ### Setup
 
